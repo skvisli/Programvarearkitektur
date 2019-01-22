@@ -22,7 +22,7 @@ public class Helicopter {
 
     public void update(float dt){
         // Y-axis
-        if (goingUp) {
+        /*if (goingUp) {
             if (position.y < MyGdxGame.HEIGHT - helicopter.getHeight()){
                 position.add(0, 2,0);
             } else {
@@ -35,9 +35,9 @@ public class Helicopter {
             } else {
                 goingUp = true;
             }
-        }
+        }*/
 
-        /*if (position.y > 0) {
+        if (position.y > 0) {
             velocity.add(0, GRAVITY, 0); // Gravity adds up each delta-time making it go faster and faster
         }
         velocity.scl(dt);
@@ -49,7 +49,7 @@ public class Helicopter {
             position.y = MyGdxGame.HEIGHT - helicopter.getHeight();
         }
 
-        velocity.scl(1/dt);*/
+        velocity.scl(1/dt);
 
         // X-axis
         if (position.y <= 0) { // Helicopter doesn't move on ground

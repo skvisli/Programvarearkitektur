@@ -2,6 +2,7 @@ package com.mygdx.game.states;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.mygdx.game.MyGdxGame;
 import com.mygdx.game.sprites.Helicopter;
@@ -9,6 +10,7 @@ import com.mygdx.game.sprites.Helicopter;
 public class PlayState extends State {
     private Texture background;
     private Helicopter helicopter;
+    private BitmapFont font = new BitmapFont();
 
     protected PlayState(GameStateManager gsm) {
         super(gsm);
@@ -19,10 +21,9 @@ public class PlayState extends State {
 
     @Override
     protected void handleInput() {
-        /*if(Gdx.input.justTouched()) {
+        if(Gdx.input.justTouched()) {
             helicopter.fly();
-        }*/
-        helicopter.fly();
+        }
     }
 
     @Override
@@ -36,6 +37,7 @@ public class PlayState extends State {
         sb.setProjectionMatrix(cam.combined);
         sb.begin();
         sb.draw(background, 0, 0, MyGdxGame.WIDTH, MyGdxGame.HEIGHT);
+        font.draw(sb, helicopter.getPosition().toString(), 0, MyGdxGame.HEIGHT);
         sb.draw(helicopter.getTexture(), helicopter.getPosition().x, helicopter.getPosition().y);
         sb.end();
     }
