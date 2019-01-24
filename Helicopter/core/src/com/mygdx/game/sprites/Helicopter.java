@@ -6,13 +6,13 @@ import com.badlogic.gdx.math.Vector3;
 import com.mygdx.game.MyGdxGame;
 
 public class Helicopter {
-    private static final int GRAVITY = -15;
-    private Vector3 position;
+    protected static final int GRAVITY = -15;
+    protected Vector3 position;
 
-    private Vector3 velocity;
-    private Sprite helicopter;
-    private boolean goingRight;
-    private boolean goingUp;
+    protected Vector3 velocity;
+    protected Sprite helicopter;
+    protected boolean goingRight;
+    protected boolean goingUp;
 
     public  Helicopter(int x, int y) {
         position = new Vector3(x, y, 0);
@@ -21,22 +21,6 @@ public class Helicopter {
     }
 
     public void update(float dt){
-        // Y-axis
-        /*if (goingUp) {
-            if (position.y < MyGdxGame.HEIGHT - helicopter.getHeight()){
-                position.add(0, 2,0);
-            } else {
-                goingUp = false;
-            }
-        }
-        if (!goingUp) {
-            if (position.y > 0){
-                position.add(0, -2,0);
-            } else {
-                goingUp = true;
-            }
-        }*/
-
         if (position.y > 0) {
             velocity.add(0, GRAVITY, 0); // Gravity adds up each delta-time making it go faster and faster
         }
