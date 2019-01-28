@@ -9,7 +9,7 @@ import com.mygdx.game.states.GameStateManager;
 import com.mygdx.game.states.MenyState;
 
 public class MyGdxGame extends ApplicationAdapter {
-	public static final int WIDTH = 480;
+	public static final int WIDTH = 500;
 	public static final int HEIGHT = 800;
 
 	public static final String TITLE = "Flappybird";

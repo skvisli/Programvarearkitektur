@@ -17,7 +17,7 @@ public class Helicopter {
     public  Helicopter(int x, int y) {
         position = new Vector3(x, y, 0);
         velocity = new Vector3(0, 0 ,0);
-        helicopter = new Sprite(new Texture("attackhelicopter.PNG"));
+        helicopter = new Sprite(new Texture("heli1cut.PNG"));
     }
 
     public void update(float dt){
