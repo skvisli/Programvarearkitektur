@@ -12,14 +12,13 @@ import java.awt.Frame;
 public class Helicopter {
     protected static final int GRAVITY = -15;
     protected Vector3 position;
-
     protected Vector3 velocity;
     protected Sprite texture;
     protected boolean goingRight;
     protected boolean goingUp;
 
     protected Rectangle hitbox;
-    private Animation helicopterAnimation;
+    protected Animation helicopterAnimation;
     protected float frameWidth;
 
     public  Helicopter(int x, int y) {
@@ -74,7 +73,6 @@ public class Helicopter {
             }
         }
         velocity.scl(1/dt);
-
     }
 
     public void update(float dt){
@@ -120,23 +118,19 @@ public class Helicopter {
         float t_collision = hitboxBottom - hitbox2.y;
         float l_collision = hitboxRight - hitbox2.x;
         float r_collision = hitbox2Right - hitbox2.x;
-        if (t_collision < b_collision && t_collision < l_collision && t_collision < r_collision )
-        {
+        if (t_collision < b_collision && t_collision < l_collision && t_collision < r_collision ) {
             //Top collision
             position.add(0, -20, 0);
         }
-        if (b_collision < t_collision && b_collision < l_collision && b_collision < r_collision)
-        {
+        if (b_collision < t_collision && b_collision < l_collision && b_collision < r_collision) {
             //bottom collision
             position.add(0, 20, 0);
         }
-        if (l_collision < r_collision && l_collision < t_collision && l_collision < b_collision)
-        {
+        if (l_collision < r_collision && l_collision < t_collision && l_collision < b_collision) {
             //Left collision
             position.add(-20, 0 ,0);
         }
-        if (r_collision < l_collision && r_collision < t_collision && r_collision < b_collision )
-        {
+        if (r_collision < l_collision && r_collision < t_collision && r_collision < b_collision ) {
             //Right collision
             position.add(20, 0, 0);
         }
