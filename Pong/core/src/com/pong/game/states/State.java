@@ -1,4 +1,4 @@
-package com.game.game.states;
+package com.pong.game.states;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;

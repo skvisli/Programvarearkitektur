@@ -1,4 +1,4 @@
-package com.game.game;
+package com.pong.game;
 
 import org.robovm.apple.foundation.NSAutoreleasePool;
 import org.robovm.apple.uikit.UIApplication;

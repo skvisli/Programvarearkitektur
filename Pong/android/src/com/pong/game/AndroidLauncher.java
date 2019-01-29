@@ -1,4 +1,4 @@
-package com.game.game;
+package com.pong.game;
 
 import android.os.Bundle;
 

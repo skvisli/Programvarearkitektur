@@ -1,12 +1,12 @@
-package com.game.game;
+package com.pong.game;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.game.game.states.GameStateManager;
-import com.game.game.states.MenyState;
+import com.pong.game.states.GameStateManager;
+import com.pong.game.states.MenyState;
 
 public class MyGdxGame extends ApplicationAdapter {
 	public static final int WIDTH = 1000;

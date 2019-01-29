@@ -1,4 +1,4 @@
-package com.game.game.states;
+package com.pong.game.states;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -6,9 +6,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector3;
-import com.game.game.MyGdxGame;
-import com.game.game.sprites.Ball;
-import com.game.game.sprites.Paddle;
+import com.pong.game.MyGdxGame;
+import com.pong.game.sprites.Ball;
+import com.pong.game.sprites.Paddle;
 
 public class PlayState extends State {
     private Texture background;

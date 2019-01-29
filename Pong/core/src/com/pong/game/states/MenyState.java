@@ -1,9 +1,9 @@
-package com.game.game.states;
+package com.pong.game.states;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.game.game.MyGdxGame;
+import com.pong.game.MyGdxGame;
 
 public class MenyState extends State {
     private Texture background;

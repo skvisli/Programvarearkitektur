@@ -1,10 +1,10 @@
-package com.game.game.sprites;
+package com.pong.game.sprites;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
-import com.game.game.MyGdxGame;
+import com.pong.game.MyGdxGame;
 
 public class Ball {
     protected static final int GRAVITY = -15;
