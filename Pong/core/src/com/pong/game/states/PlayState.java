@@ -10,7 +10,7 @@ import com.pong.game.MyGdxGame;
 import com.pong.game.sprites.Ball;
 import com.pong.game.sprites.Paddle;
 
-public class PlayState extends State {
+public final class PlayState extends State {
     private Texture background;
     private Ball ball;
     private Paddle paddleLeft;
@@ -19,8 +19,8 @@ public class PlayState extends State {
     private static int goalsLeft = 0;
     private static int goalsRight = 0;
 
-    protected PlayState(GameStateManager gsm) {
-        super(gsm);
+    protected PlayState() {
+        super();
         background = new Texture("gameboard.jpg");
         ball = new Ball(MyGdxGame.WIDTH / 2, MyGdxGame.HEIGHT / 2);
         paddleLeft = new Paddle();
@@ -116,6 +116,6 @@ public class PlayState extends State {
     }
 
     public void pauseGame(){
-        gsm.set(new MenyState(gsm));
+        GameStateManager.getInstance().setState(new MenyState());
     }
 }

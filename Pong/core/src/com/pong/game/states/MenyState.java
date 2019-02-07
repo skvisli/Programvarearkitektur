@@ -8,8 +8,9 @@ import com.pong.game.MyGdxGame;
 public class MenyState extends State {
     private Texture background;
     private Texture playBtn;
-    public MenyState(GameStateManager gsm) {
-        super(gsm);
+
+    public MenyState() {
+        super();
         background = new Texture("gameboard.jpg");
         playBtn = new Texture("play-button_small.jpg");
         cam.setToOrtho(false, MyGdxGame.WIDTH, MyGdxGame.HEIGHT);
@@ -18,7 +19,7 @@ public class MenyState extends State {
     @Override
     public void handleInput() {
         if (Gdx.input.justTouched()) {
-            gsm.set(new PlayState(gsm));
+            GameStateManager.getInstance().setState(new PlayState());
             dispose();
         }
     }

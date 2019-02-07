@@ -13,34 +13,31 @@ public class MyGdxGame extends ApplicationAdapter {
 	public static final int HEIGHT = 400;
 
 	public static final String TITLE = "Pong";
-	private GameStateManager gsm;
 	private SpriteBatch batch;
 	Texture img;
 	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		gsm = new GameStateManager();
 		img = new Texture("badlogic.jpg");
 		Gdx.gl.glClearColor(1, 0, 0, 1);
-		gsm.push(new MenyState(gsm));
+		GameStateManager.getInstance().setState(new MenyState());
 	}
 
 	@Override
 	public void render () {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-		gsm.update(Gdx.graphics.getDeltaTime());
-		gsm.render(batch);
+		GameStateManager.getInstance().update(Gdx.graphics.getDeltaTime());
+		GameStateManager.getInstance().render(batch);
 
 		/*batch.begin();
 		batch.draw(img, 0, 0);
 		batch.end();*/
 	}
 	
-	/*@Override
+	@Override
 	public void dispose () {
-		batch.dispose();
-		img.dispose();
-	}*/
+
+	}
 }
